@@ -1,0 +1,7 @@
+{
+    "inline_keyboard": [
+        [{"text": "Получить инфу", "callback_data": "button1"}],
+        [{"text": "Узнать цену", "callback_data": "button2"}],
+        [{"text": "Узнать вес", "callback_data": "button3"}]
+    ]
+}

@@ -29,19 +29,19 @@ class RPCClient:
         future: asyncio.Future = self.futures.pop(message.correlation_id)
         future.set_result(message.body.decode('utf-8'))
 
-    async def call(self, n: int) -> int:
+    async def get_image_info(self, url: str, standart_info: bool) -> str:
         correlation_id = str(uuid.uuid4())
         loop = asyncio.get_running_loop()
         future = loop.create_future()
-
         self.futures[correlation_id] = future
+
         await self.channel.default_exchange.publish(
             Message(
-                n.encode(),
+                url.encode(),
                 content_type="text/plain",
                 correlation_id=correlation_id,
                 reply_to=self.callback_queue.name,
             ),
-            routing_key="rpc_queue",
+            routing_key="standart_image_caption" if standart_info else "additional_image_caption",
         )
         return await future
