@@ -1,9 +1,9 @@
 import requests
 import asyncio
-from typing import Iterable, Mapping
+from typing import Iterable
 from MessageParser import MessageParser
 from RPCClient import RPCClient
-import threading
+import aiohttp
 
 token = '6648128422:AAFOJYtBvuTQ5gJzUw9Te9x4ULj-_pFCZVI'
 base = 'https://api.telegram.org/bot'+token+'/'
@@ -16,6 +16,7 @@ class TGBot():
         self.lastUpdate: int = 0
         self.parser: MessageParser = MessageParser()
         self.rpcclient = await RPCClient().connect()
+        self.session = aiohttp.ClientSession()
         while True:
             await asyncio.sleep(2)
             asyncio.create_task(self.get_updates())
@@ -72,11 +73,8 @@ class TGBot():
                         'chat_id=' + str(chat_id) +\
                         '&photo=' + image_id + \
                         '&caption=' + caption
-                    loop: asyncio.AbstractEventLoop = asyncio.get_event_loop()
-                    response = loop.run_in_executor(None, requests.post, url)
-                    await response
-                    result_of_responce: requests.Response = response.result()
-                    if result_of_responce.status_code != 200:
+                    response: aiohttp.ClientResponse = await self.session.get(url=url)
+                    if response.status != 200:
                         print("Фото не было отправлено")
         except Exception as e:
             print(e)
