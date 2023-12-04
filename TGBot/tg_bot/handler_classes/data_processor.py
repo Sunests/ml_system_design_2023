@@ -7,7 +7,8 @@ class DataProcessor:
     def __init__(self, base_url: str) -> None:
         self.base_url: str = base_url
         image_buttons_json = open(file="./buttons/buttons_for_photos.json")
-        self.buttons_for_images = json.loads(image_buttons_json.read())
+        self.buttons_for_images: Mapping = json.loads(
+            image_buttons_json.read())
 
     def prepare_data(self, message_info: Mapping) -> Mapping:
         chat_id = message_info['chat_id']
@@ -43,11 +44,20 @@ class DataProcessor:
     def _prepare_photo_data(self, chat_id: str, update_type: str, image_id: str, caption: str) -> Mapping:
 
         data: Mapping = {}
+        object_type = caption.split()[0]
         inline_keyboard: Mapping[str,
                                  Iterable[Mapping[str: str]]] = {}
-
         if update_type == 'image_message':
-            inline_keyboard = self.buttons_for_images
+            buttons_for_images = dict(self.buttons_for_images).copy()
+            inline_keyboard["inline_keyboard"] = []
+            for i in range(len(buttons_for_images["inline_keyboard"])):
+                inline_keyboard["inline_keyboard"].append([])
+                for j in range(len(buttons_for_images["inline_keyboard"][i])):
+                    inline_keyboard["inline_keyboard"][i].append({})
+                    inline_keyboard["inline_keyboard"][i][j] = {
+                        'text': buttons_for_images["inline_keyboard"][i][j]['text'],
+                        'callback_data': object_type + " " + buttons_for_images["inline_keyboard"][i][j]['callback_data']
+                    }
 
         data = {
             'chat_id': chat_id,
