@@ -48,9 +48,9 @@ class DatabaseManager:
 		                            f'LIMIT {limit}')
 		else:
 			query = self.worker.select('SELECT "Request".text FROM "Request" '
-			                           'WHERE "Request".id="Product_Request".request_id '
-			                           f'INNER JOIN "Product" ON "Product".name={product} '
+			                           f'INNER JOIN "Product" ON "Product".name=\'{product}\' '
 			                           'INNER JOIN "Product_Request" ON "Product".id="Product_Request".product_id '
+			                           'WHERE "Request".id="Product_Request".request_id '
 			                           'ORDER BY "Request".count_received '
 			                           'LIMIT 5')
 		return query
@@ -61,9 +61,9 @@ class DatabaseManager:
 		return query
 	def getSimilarProducts(self, limit, product):
 		product_type=self.worker.select('SELECT type FROM "Product" '
-		                        f'WHERE name={product}')
+		                        f'WHERE name=\'{product}\'')[0][0]
 		query = self.worker.select('SELECT name FROM "Product" '
-		                           f'WHERE name!={product} AND type={product_type}'
+		                           f'WHERE name!=\'{product}\' AND type=\'{product_type}\''
 		                           'ORDER BY random() '
 		                           f'LIMIT {limit}')
 		return query

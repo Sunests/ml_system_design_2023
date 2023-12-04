@@ -6,18 +6,16 @@ class ChatManager:
 	def __init__(self):
 		self.worker=worker.ChatWorker()
 
-	def getRandomInfo(self, product): # Called if no request provided by user
-		number = random.randint(0, 3)
+	def getRandomInfo(self, product):   # Called if no request provided by user
+		number = random.randint(0, 2)
 		if number == 0:
-			self.worker.getResponseMostPopular(product)
+			return self.worker.getResponseMostPopular(product)
 		elif number==1:
-			self.worker.getResponseSimilarProduct(product)
+			return self.worker.getResponseSimilarProduct(product)
 		elif number == 2:
-			self.worker.getResponsePromotional()
+			return self.worker.getResponsePromotional()
 		else:
 			pass
-
-		return
 	def getCustomInfo(self, product, request):
 		return self.worker.getResponseCustom(product, request)
 	def getProductInfo(self, product):  #Button 1
