@@ -8,9 +8,6 @@ import os
 from dotenv import load_dotenv
 
 
-# token = '6648128422:AAFOJYtBvuTQ5gJzUw9Te9x4ULj-_pFCZVI'
-
-
 class TGBot():
 
     async def run_bot(self):
@@ -46,8 +43,7 @@ class TGBot():
             else:
                 return []
 
-        except Exception as e:
-            print(e)
+        except:
             return []
 
     async def handle_telegram_update(self, update_info):
@@ -60,8 +56,6 @@ class TGBot():
             prepared_data = self.dp.prepare_data(message_info)
 
             await self.send_message_to_user(prepared_data)
-        except TypeError as e:
-            print("TypeError: " + str(e))
         except Exception as e:
             print(e)
 
