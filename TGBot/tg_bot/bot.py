@@ -29,6 +29,7 @@ class TGBot():
 
     async def get_updates(self) -> Iterable:
         try:
+            print("Было")
             response: aiohttp.ClientResponse = await self.session.get(
                 self.base_url+'getUpdates?offset='+str(self.lastUpdate))
             if response.status == 409:

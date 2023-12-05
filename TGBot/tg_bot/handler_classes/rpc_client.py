@@ -16,11 +16,16 @@ class RPCClient:
         self.futures: MutableMapping[str, asyncio.Future] = {}
 
     async def connect(self) -> "RPCClient":
-        self.connection = await connect("http://localhost:8080")
-        self.channel = await self.connection.channel()
-        self.callback_queue = await self.channel.declare_queue(exclusive=True)
-        await self.callback_queue.consume(self.on_response, no_ack=True)
-        return self
+        while True:
+            try:
+                self.connection = await connect("http://rabbitmq:5672")
+                self.channel = await self.connection.channel()
+                self.callback_queue = await self.channel.declare_queue(exclusive=True)
+                await self.callback_queue.consume(self.on_response, no_ack=True)
+                return self
+            except Exception as e:
+                print(f"Failed to connect to RabbitMQ: {e}")
+                await asyncio.sleep(3)
 
     async def on_response(self, message: AbstractIncomingMessage) -> None:
         if message.correlation_id is None:

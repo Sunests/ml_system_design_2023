@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    container_name: "rabbitmq"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - my_network
+
+  tg_bot:
+    build: TGBot/.
+    container_name: "tg_bot"
+    depends_on:
+      - rabbitmq
+    networks:
+      - my_network
+
+  model:
+    build: ModelServer/.
+    container_name: "ml_model"
+    depends_on:
+      - rabbitmq
+    networks:
+      - my_network
+      
+networks:
+  my_network:
