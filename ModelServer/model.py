@@ -22,7 +22,7 @@ import lightning.pytorch as pl
 class LitModel(pl.LightningModule):
     def __init__(self):
         super().__init__()
-        with open('products.json', 'r') as products:
+        with open('products.json', 'r', encoding="utf-8") as products:
             self.classes = json.load(products)
         self.num_classes = len(self.classes.keys())
 
