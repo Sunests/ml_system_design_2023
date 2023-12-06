@@ -1,6 +1,6 @@
 import os
 import openai
-from Project.Database import Manager as database_manager
+from ThirdPartyService.Project.Database import Manager as database_manager
 import random
 
 class ChatWorker:

@@ -8,7 +8,7 @@ services:
       - "5672:5672"
       - "15672:15672"
     networks:
-      - my_network
+      - ml_tg
 
   tg_bot:
     build: TGBot/.
@@ -16,7 +16,7 @@ services:
     depends_on:
       - rabbitmq
     networks:
-      - my_network
+      - ml_tg
 
   model:
     build: ModelServer/.
@@ -24,7 +24,25 @@ services:
     depends_on:
       - rabbitmq
     networks:
-      - my_network
+      - ml_tg
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: ml_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 1234
+      PGDATA: /var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'SELECT 1;' | psql -U admin -d ml_db -h localhost -p 5432"]
+      interval: 3s
+      timeout: 5s
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./ThirdPartyService/pgdata:/var/lib/postgresql/data
+    networks:
+      - ml_tg
       
 networks:
-  my_network:
+  ml_tg:

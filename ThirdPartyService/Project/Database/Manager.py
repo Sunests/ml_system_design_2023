@@ -1,4 +1,4 @@
-from Project.Database import Worker as worker
+from ThirdPartyService.Project.Database import Worker as worker
 
 class DatabaseManager:
 	def __init__(self):

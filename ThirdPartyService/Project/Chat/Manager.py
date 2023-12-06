@@ -1,5 +1,5 @@
 import random
-from Project.Chat import Worker as worker
+from ThirdPartyService.Project.Chat import Worker as worker
 
 
 class ChatManager:
