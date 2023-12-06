@@ -5,17 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bbedfa0-7198-456c-a7a5-f67aef900b0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ThirdPartyService/Project/Chat/GPT_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThirdPartyService/Project/Database/Database_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ThirdPartyService/Project/Product_button_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ml_system_design_2023.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ml_system_design_2023.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/Project/Chat/Manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/Project/Chat/Manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/Project/Chat/Worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/Project/Chat/Worker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/Project/Database/Manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/Project/Database/Manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/Project/Database/Worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/Project/Database/Worker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/Project/Chat/GPT_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/Project/Chat/GPT_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/Project/Database/Database_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/Project/Database/Database_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/Project/Product_button_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/Project/Product_button_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/Project/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/Project/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/1/pg_internal.init" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/1/pg_internal.init" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/1249" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/1249" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/1259" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/1259" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16389" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16389" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16392" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16392" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16394" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16394" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16397" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16397" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/pg_internal.init" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/pg_internal.init" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/5/pg_internal.init" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/5/pg_internal.init" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/global/pg_control" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/global/pg_control" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/global/pg_internal.init" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/global/pg_internal.init" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/pg_wal/000000010000000000000001" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/pg_wal/000000010000000000000001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/pg_xact/0000" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/pg_xact/0000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/postmaster.pid" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/postmaster.pid" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,13 +99,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ThirdPartyService/Project/test.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ThirdPartyService/Project/Product_button_parser.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="4" />
+          <line>29</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

@@ -27,6 +27,8 @@ async def main() -> None:
 
                     print(geted_info)
 
+                    response = parser.process_string(geted_info)
+
                     # chat.getProductInfo("Банан")      // returns string
                     # chat.getProductFact("Банан")
                     # geted_info = chat.getCustomInfo("Банан", geted_info)

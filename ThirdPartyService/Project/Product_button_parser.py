@@ -15,11 +15,13 @@ class Product_button_parser:
 
     def process_string(self, input_string):
         # Разделение строки на два параметра
-        button, fruit_name = self._extract_params(input_string)
+        fruit_name, button = self._extract_params(input_string)
 
         # Вызов соответствующего метода из словаря
         if button in self.button_mapping:
-            self.button_mapping[button](fruit_name)
+            response = self.button_mapping[button](fruit_name)
+            return response
+
         else:
             print("Неподдерживаемая операция")
 
@@ -31,4 +33,3 @@ class Product_button_parser:
         return button, fruit_name
 
 
-input_string = "button1 (button2, button3) название фрукта (артбуз, яблоко)"
