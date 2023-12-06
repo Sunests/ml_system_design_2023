@@ -8,7 +8,7 @@ CREATE TABLE prices (
   class_id INTEGER PRIMARY KEY,
   class_name VARCHAR(100) NOT NULL,
   price NUMERIC(10,2) NOT NULL
-);
+); 
 
 INSERT INTO energy (class_id, class_name, bzu) VALUES
 (1, 'алоэвера', 'БЖУ - 0,10/0,00/0,75'),
