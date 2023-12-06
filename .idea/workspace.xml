@@ -5,47 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bbedfa0-7198-456c-a7a5-f67aef900b0c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/1247" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/1247" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/1249" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/1249" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/1249_fsm" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/1249_fsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/1259" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/1259" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16389" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16392" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16394" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16397" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16399" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16399" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16402" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16402" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16404" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16407" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16409" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16412" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16414" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16414" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16417" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/16417" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2579" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2579" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2606" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2606" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2608" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2608" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2610" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2610" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2610_fsm" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2610_fsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2610_vm" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2610_vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2658" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2658" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2659" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2659" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2662" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2662" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2663" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2663" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2664" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2664" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2665" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2665" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2666" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2666" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2667" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2667" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2673" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2673" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2674" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2674" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2678" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2678" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2679" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2679" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2703" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2703" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2704" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/2704" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/3455" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/base/16384/3455" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThirdPartyService/bd_create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/bd_create.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/global/pg_control" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/global/pg_control" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/pg_wal/000000010000000000000001" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/pg_wal/000000010000000000000001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/pg_xact/0000" beforeDir="false" afterPath="$PROJECT_DIR$/ThirdPartyService/pgdata/pg_xact/0000" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ThirdPartyService/pgdata/postmaster.pid" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
