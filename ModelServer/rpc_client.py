@@ -5,20 +5,13 @@ import time
 
 
 class RPCClient:
+    def __init__(self, model):
+        self.model = model
+
     def connect(self):
+        self.connection = pika.BlockingConnection(pika.ConnectionParameters(host='rabbitmq', port="5672"))
 
-        self.products: Iterable = ['банан', 'капуста',
-                                   'щавель', 'помидор', 'огурец', 'арбуз', 'алоэ']
-        while True:
-            try:
-                connection = pika.BlockingConnection(
-                    pika.ConnectionParameters(host='rabbitmq', port="5672"))
-                break
-            except Exception as e:
-                print(f"Failed to connect to RabbitMQ: {e}")
-                time.sleep(3)
-
-        self.channel = connection.channel()
+        self.channel = self.connection.channel()
 
         self.channel.queue_declare(queue='standart_image_caption')
 
@@ -27,8 +20,9 @@ class RPCClient:
                                    on_message_callback=self._on_request)
 
     def _on_request(self, ch, method, props, body):
-        # место для работы модели
-        response = random.choice(self.products)
+        # Место для работы модели
+        response = self.model.recognize(body)
+        print(body)
         ch.basic_publish(exchange='',
                          routing_key=props.reply_to,
                          properties=pika.BasicProperties(
@@ -39,3 +33,5 @@ class RPCClient:
     def start_consuming(self):
         print(" [x] Awaiting RPC requests")
         self.channel.start_consuming()
+
+
