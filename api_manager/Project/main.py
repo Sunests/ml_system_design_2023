@@ -7,7 +7,7 @@ from aio_pika.abc import AbstractIncomingMessage
 
 
 async def main() -> None:
-    connection = await connect("http://localhost:8080")
+    connection = await connect("http://rabbitmq:5672")
     channel = await connection.channel()
     exchange = channel.default_exchange
     queue = await channel.declare_queue("additional_image_caption")
@@ -25,7 +25,7 @@ async def main() -> None:
 
                     # chat.getProductInfo("Банан")      // returns string
                     # chat.getProductFact("Банан")
-                    geted_info=chat.getCustomInfo("Банан", geted_info)
+                    geted_info = chat.getCustomInfo("Банан", geted_info)
                     # chat.getRandomInfo("Банан")
 
                     response = geted_info.encode()

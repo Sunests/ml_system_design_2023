@@ -33,9 +33,16 @@ services:
       - rabbitmq
     networks:
       - ml_tg
-      
+        
+  prepare_for_db:
+      image: python
+      volumes:
+        - ./ml_db/pgdata:/var/lib/postgresql/data
+        - ./ml_db/create_missing_directories.py:/app/create_missing_directories.py
+      command: ["python", "/app/create_missing_directories.py"]
+
   ml_db:
-    image: postgres
+    image: postgres:15
     container_name: "ml_db"
     environment:
       POSTGRES_DB: ml_db
@@ -53,6 +60,7 @@ services:
       - ./ml_db/pgdata:/var/lib/postgresql/data
     networks:
       - ml_tg
+  
       
 networks:
   ml_tg:

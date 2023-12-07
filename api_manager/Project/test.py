@@ -3,16 +3,16 @@ import time
 
 import asyncio
 import logging
-import threading
 
 from aio_pika import Message, connect
 from aio_pika.abc import AbstractIncomingMessage
 from Product_button_parser import Product_button_parser
 
+
 async def main() -> None:
-    # connection = await connect("http://rabbitmq:5672")
+    connection = await connect("http://rabbitmq:5672")
     # connection = await connect("http://rabbitmq", port=5672)
-    connection = await connect("http://localhost:5672")
+    # connection = await connect("http://localhost:5672")
     channel = await connection.channel()
     exchange = channel.default_exchange
     queue = await channel.declare_queue("additional_image_caption")
@@ -29,10 +29,12 @@ async def main() -> None:
 
                     geted_info = message.body.decode('utf-8')
 
-                    asyncio.create_task(send(parser, geted_info, exchange, message))
+                    asyncio.create_task(
+                        send(parser, geted_info, exchange, message))
 
             except Exception:
                 logging.exception("Processing error for message %r", message)
+
 
 async def send(parser, geted_info, exchange, message):
 

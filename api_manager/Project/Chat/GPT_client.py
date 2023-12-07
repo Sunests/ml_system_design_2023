@@ -3,9 +3,11 @@ import openai
 from dotenv import load_dotenv
 import os
 
+
 class GPT_client:
     def __init__(self):
         load_dotenv()
+        print(os.getenv("CHATGPT_API_KEY"))
         self.client = openai.AsyncOpenAI(api_key=os.getenv("CHATGPT_API_KEY"))
         self.role = "user"
 
@@ -22,5 +24,3 @@ class GPT_client:
     async def random_fact(self, fruit_name):
         print(f"Запрос случайного факта для {fruit_name}")
         return await self.getResponse((f'Напиши случайный интересный факт для продукта {fruit_name}'))
-
-
