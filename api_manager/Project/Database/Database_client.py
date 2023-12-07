@@ -4,7 +4,7 @@ import psycopg2 as pg
 
 class Database_client:
     def __init__(self, database_name='ml_db', user='admin', password='1234'):
-        self.connection = pg.connect(dbname=database_name, user=user, password=password, host='ml_db')
+        self.connection = pg.connect(dbname=database_name, user=user, password=password, host='localhost')
         self.cursor = self.connection.cursor()  #ml_db
 
     def __del__(self):
