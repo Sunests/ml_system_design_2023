@@ -33,7 +33,6 @@ def convert_jpeg_to_jpg(folder_path):
 
 
 if __name__ == "__main__":
-    # Замените 'путь_к_папке' на путь к вашей папке с изображениями
     folder_path = 'broccoli_good'
 
     convert_jpeg_to_jpg(folder_path)
