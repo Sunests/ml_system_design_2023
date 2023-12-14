@@ -12,7 +12,7 @@ def convert_jpeg_to_jpg(folder_path):
         filepath = os.path.join(folder_path, filename)
 
         # Проверяем, является ли файл изображением
-        if filename.lower().endswith(('.jpeg', '.webp')):
+        if filename.lower().endswith(('.jpeg', '.webp', '.png')):
             try:
                 # Открываем изображение
                 with Image.open(filepath) as img:
@@ -33,6 +33,6 @@ def convert_jpeg_to_jpg(folder_path):
 
 
 if __name__ == "__main__":
-    folder_path = 'broccoli_good'
+    folder_path = 'saffron_good'
 
     convert_jpeg_to_jpg(folder_path)
