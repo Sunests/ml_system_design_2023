@@ -1,5 +1,8 @@
 FROM python:3.11
 
+RUN apt-get update && \
+    apt-get install -y libgl1-mesa-glx
+
 COPY requirements.txt /tg_bot/requirements.txt
 
 WORKDIR /tg_bot
