@@ -22,7 +22,6 @@ class RPCClient:
     def _on_request(self, ch, method, props, body):
         # Место для работы модели
         response = self.model.recognize(body)
-        print(body)
         ch.basic_publish(exchange='',
                          routing_key=props.reply_to,
                          properties=pika.BasicProperties(

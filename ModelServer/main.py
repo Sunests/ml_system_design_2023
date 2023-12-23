@@ -1,10 +1,10 @@
 from rpc_client import RPCClient
-from model import LitModel
+from model import YoloModel
 import time
 
 
 if __name__ == "__main__":
-    model = LitModel()
+    model = YoloModel()
     rpc_client = RPCClient(model)
     while True:
         try:
